@@ -1,0 +1,8 @@
+FROM rust:1.78
+
+RUN rustup default nightly
+RUN cargo +nightly install hvm
+RUN cargo +nightly install bend-lang
+
+ENTRYPOINT ["tail"]
+CMD ["-f","/dev/null"]

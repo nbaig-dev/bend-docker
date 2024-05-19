@@ -1,0 +1,12 @@
+version: '3.3'
+services:
+  bend:
+    container_name: bend
+    build:
+      context: ./docker-files
+      dockerfile: bend
+    restart: always
+    volumes:
+      - ./:/workspace/
+      - ./cp-vol/data:/home/data/
+    
